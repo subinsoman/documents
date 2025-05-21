@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jmxmanage>
+	<busyhr>
+		<busyhrstarttime>12</busyhrstarttime>
+		<busyhrstoptime>18</busyhrstoptime>
+	</busyhr>
+	<peekhr>
+		<peekhrstarttime>11</peekhrstarttime>
+		<peekhrstoptime>19</peekhrstoptime>
+	</peekhr>
+</jmxmanage>

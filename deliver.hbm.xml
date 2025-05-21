@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.sixdee.imp.dto.SmppMesageDTO" table="PREPAID_ESME_TABLE">
+  <id name="transactionId" column="TRANSACTION_ID">
+   <generator class="assigned" />
+  </id>
+  <property name="smscID">
+   <column name="SMPP_ID" />
+  </property>
+  <property name="orginatingAddress">
+   <column name="OA" />
+  </property>
+  <property name="destinationAddress">
+   <column name="DA" />
+  </property>
+  <property name="dcs">
+   <column name="DCS" />
+  </property>
+  <!--  
+  <property name="byteSms">
+   <column name="SMS_TEXT" />
+  </property>
+  -->
+  <property name="sms">
+   <column name="SMS_TEXT" />
+  </property>
+  <property name="timeStamp">
+   <column name="TIME_STAMP"/>
+  </property>
+  <!-- 
+  <property name="sequenceNumber">
+   <column name="SEQUENCE_NUM" />
+  </property>
+  -->
+  <property name="optionalParamText">
+   <column name="OPTIONAL_PARAM" />
+  </property>
+ </class>
+</hibernate-mapping>

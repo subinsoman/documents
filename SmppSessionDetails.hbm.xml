@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sixdee.imp.common.dto.ProcessorConfigParam"
+		table="SMPP_ACCOUNT_DETAILS" dynamic-insert="true">
+		<id name="id" type="java.lang.Integer" column="ID">
+			<!-- id maps with the primary key of the table -->
+			<!-- class can be assigned or increment or sequence -->
+			<generator class="increment" />
+		</id>
+
+		<property name="smscId">
+			<column name="SMSCID" />
+		</property>
+		<property name="ipAddress">
+			<column name="SMSCIP" />
+		</property>
+		<property name="port" type="java.lang.Integer">
+			<column name="PORT" />
+		</property>
+		<property name="shortCode">
+			<column name="SHORTCODE" />
+		</property>
+		<property name="systemId">
+			<column name="USERNAME" />
+		</property>
+		<property name="password">
+			<column name="PASSWORD" />
+		</property>
+		<property name="bindMode">
+			<column name="BIND_MODE" />
+		</property>
+		<property name="protocol">
+			<column name="PROTOCOL" />
+		</property>
+		<property name="systemType">
+			<column name="SYSTEM_TYPE" />
+		</property>
+		<property name="receiveTimeout" type="java.lang.Integer">
+			<column name="RECEIVE_TIMEOUT" />
+		</property>
+		<property name="enquireLinkTimer" type="java.lang.Integer">
+			<column name="ENQUIRE_LINK_TIMER" />
+		</property>
+		<property name="pduProcessorDegree" type="java.lang.Integer">
+			<column name="PDU-PROCESSORS" />
+		</property>
+		<property name="pduMaxQueueSize" type="java.lang.Integer">
+			<column name="PDU-MAXQUEUESIZE" />
+		</property>
+		<property name="addrTon" type="java.lang.Integer">
+			<column name="ADDR-TON" />
+		</property>
+		<property name="addrNpi" type="java.lang.Integer">
+			<column name="ADDR-NPI" />
+		</property>
+		<property name="addrRange">
+			<column name="ADDR-RANGE" />
+		</property>
+		<property name="serviceType">
+			<column name="SERVICE-TYPE" />
+		</property>
+		<property name="sourceAddrTon" type="java.lang.Integer">
+			<column name="SOURCE-ADDR-TON" />
+		</property>
+		<property name="sourceAddrNpi" type="java.lang.Integer">
+			<column name="SOURCE-ADDR-NPI" />
+		</property>
+		<property name="destAddrTon" type="java.lang.Integer">
+			<column name="DEST-ADDR-TON" />
+		</property>
+		<property name="destAddrNpi" type="java.lang.Integer">
+			<column name="DEST-ADDR-NPI" />
+		</property>
+		<property name="esmClass" type="java.lang.Integer">
+			<column name="ESMCLASS" />
+		</property>
+		<property name="concatenatedSMesmClass" type="java.lang.Integer">
+			<column name="CONCATENATED-SMESM-CLASS" />
+		</property>
+		<property name="protocolId" type="java.lang.Integer">
+			<column name="PROTOCOLID" />
+		</property>
+		<property name="priorityFlag" type="java.lang.Integer">
+			<column name="PRIORITY-FLAG" />
+		</property>
+		<property name="registeredDelivery" type="java.lang.Integer">
+			<column name="REGISTERED-DELIVERY" />
+		</property>
+		<property name="replaceIfPresentFlag" type="java.lang.Integer">
+			<column name="REPLACE-IF-PRESENT-FLAG" />
+		</property>
+		<property name="smDefaultMsgId" type="java.lang.Integer">
+			<column name="SM-DEFAULT-MSG-ID" />
+		</property>
+		<property name="allowedNumSeries">
+			<column name="ALLOWED-NUM-SERIES" />
+		</property>
+		<property name="messageReceiverListenerImpl">
+			<column name="MESSAGE-RECEIVER-LISTENER-IMPL" />
+		</property>
+		<property name="dcs" type="java.lang.Integer">
+			<column name="DCS" />
+		</property>
+		<property name="inByte">
+			<column name="INBYTE" />
+		</property>
+		<property name="connectedStatus" type="java.lang.Integer">
+			<column name="CONNECTED_STATUS" />
+		</property>
+	</class>
+</hibernate-mapping>

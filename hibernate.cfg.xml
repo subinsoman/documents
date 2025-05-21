@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+ "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.0.72:1521:orcl</property>
+		<property name="hibernate.connection.username">MCA</property>
+		<property name="hibernate.connection.password">MCA</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+
+		<property name="hibernate.connection.autocommit">false</property>
+		<property name="hibernate.connection.release_mode">on_close</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3pO.idle_test_period">3600</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Mapping files -->
+		<mapping resource="retry.hbm.xml" />
+		<mapping resource="SmppSessionDetails.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
+

@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- # This is an example of user definition file used to authenticate bounding 
+	ESME. # User consists from attributes, each attribute is on one line, # each 
+	attribute has key and value; users are delimited by one or more # consecutive 
+	blank lines - next user is started by the next attribute after # first occurence 
+	of blank line. # Comment line can appear anywhere and it's ignored => it 
+	can't delimit # two users. # Format of attribute is <name>"="<value> # # 
+	The name and password attributes are compulsory for each user definition 
+	# as they are compared to the system_id and password parameters # in the 
+	incoming bound PDU. # # This is configuration file with default parameters 
+	# for ESME application. It's loaded by the application # on startup. -->
+<config>
+	<!-- load-from-db is by default false , if it is true then smsc details 
+		are loaded from db else from it load from xml -->
+	<smsc id="airtel" protocol="smpp" load-from-db="true"><!-- url="http://192.168.0.61:8080/SMSC/Adapter"> -->
+		<!-- This is the IP address of SMSC -->
+		<ip-address>10.0.1.202</ip-address>
+		<!-- Port to bind to3008 -->
+		<port>10001</port>
+		<!-- Your system id -->
+		<system-id>SmsEmail</system-id>
+		<!-- Your password -->
+		<password>password</password>
+		<system-type>TR</system-type>
+		<interface-version>34</interface-version>
+		<!-- The bind mode can be t, r, or tr for transmitter, -->
+		<!-- receiver or transciever respectively -->
+		<bind-mode>tr</bind-mode>
+		<!-- The receive timeout is a timeout for trying to receive a message -->
+		<!-- from the SMSC in synchronise way. -->
+		<!-- set the receive-timeout to number of seconds. -->
+		<receive-timeout>5</receive-timeout>
+		<enquireLinkTimer>360</enquireLinkTimer>
+		<!-- No of thread process simultanouly for SMSC request -->
+		<pdu-processors>5</pdu-processors>
+		<!-- set the pdu-processor waiting queue size.If you want go to infinite 
+			, -->
+		<!-- set the pdu-maxQueueSize to -1.Otherwise -->
+		<!-- set the pdu-maxQueueSize to number -->
+		<pdu-maxQueueSize>-1</pdu-maxQueueSize>
+		<!-- The address range this smpp client will serve -->
+		<addr-ton>0</addr-ton>
+		<addr-npi>0</addr-npi>
+		<addr-range>NULL</addr-range>
+		<!-- The service type can be empty or one of -->
+		<!-- the following values: -->
+		<!-- CMT, CPT, VMN, VMA, WAP or USSD -->
+		<service-type>NULL</service-type>
+		<sourceAddrTon>0</sourceAddrTon>
+		<sourceAddrNpi>0</sourceAddrNpi>
+		<destAddrTon>0</destAddrTon>
+		<destAddrNpi>0</destAddrNpi>
+		<esmClass>0</esmClass>
+		<concatenatedSMesmClass>64</concatenatedSMesmClass>
+		<protocolId>0</protocolId>
+		<priorityFlag>1</priorityFlag>
+		<registeredDelivery>0</registeredDelivery>
+		<replaceIfPresentFlag>0</replaceIfPresentFlag>
+		<smDefaultMsgId>0</smDefaultMsgId>
+		<allowedNumSeries>..*</allowedNumSeries>
+		<messageReceiverListenerImpl>com.sixdee.imp.receiver.MessageReceiverListenerImpl
+		</messageReceiverListenerImpl>
+		<!-- Value for data coding schema, default value is zero -->
+		<dcs>0</dcs>
+		<inByte>0</inByte>
+		<tps>-1</tps>
+	</smsc>
+
+	<connector>
+		<max_connection>10</max_connection>
+		<transportprotocol>http</transportprotocol>
+		<transporturl1>http://10.0.2.1:8080/TEST/servlet</transporturl1>
+		<transporturl2>http://10.0.2.1:8080/TEST/servlet</transporturl2>
+		<messageformat><![CDATA[<XML><TIME-STAMP>{0}</TIME-STAMP><TRANSACTION-ID>{1}</TRANSACTION-ID><SMPP-ID>{2}</SMPP-ID><OA>{5}</OA><DA>{6}</DA><DCS>{7}</DCS><SMS>{8}</SMS><SMS-BYTE>{9}</SMS-BYTE><OPTIONAL-PARAM>{11}</OPTIONAL-PARAM></XML>]]></messageformat>
+	</connector>
+
+
+	<!--connector> < Simultanouly, No of thread send msges to NG/3rd party through 
+		http.> <max_connection>10</max_connection> <transportprotocol>http_async</transportprotocol> 
+		<transportmethod>post</transportmethod> <transporturl1>http://10.0.1.176:8088/UMS/HttpAdapter</transporturl1> 
+		<messageformat><![CDATA[<XML><TIME-STAMP>{0}</TIME-STAMP><TRANSACTION-ID>{1}</TRANSACTION-ID><SMPP-ID>{2}</SMPP-ID><OA>{5}</OA><DA>{6}</DA><DCS>{7}</DCS><SMS>{8}</SMS><SMS-BYTE>{9}</SMS-BYTE><OPTIONAL-PARAM>{11}</OPTIONAL-PARAM></XML>]]></messageformat> 
+		</connector -->
+
+	<deliveryconnector>
+		<!-- Simultanouly, No of thread send msges to NG/3rd party through http. -->
+		<max_connection>50</max_connection>
+		<transportprotocol>http</transportprotocol>
+		<transportmethod>post</transportmethod>
+
+		<transporturl1>http://10.0.1.176:8088/UMS/HttpAdapter</transporturl1>
+
+
+		<!--<messageformat><![CDATA[<XML><FEATURE>DELIVERY</FEATURE><TIME-STAMP>{0}</TIME-STAMP><TRANSACTION-ID>{1}</TRANSACTION-ID><SMPP-ID>{2}</SMPP-ID><COMMAND-ID>{3}</COMMAND-ID><OA>{5}</OA><DA>{6}</DA><DCS>{7}</DCS><SMS></SMS><MESSAGE-ID>{10}</MESSAGE-ID></XML>]]></messageformat> -->
+		<messageformat><![CDATA[<REQ><FEATURE>DELIVERY-RECEIPT</FEATURE><TIME-STAMP>{0}</TIME-STAMP><TRANSACTION-ID>{1}</TRANSACTION-ID><SMPP-ID>{2}</SMPP-ID><COMMAND-ID>{3}</COMMAND-ID><OA>{5}</OA><DA>{6}</DA><DCS>{7}</DCS><SMS>{8}</SMS><MESSAGE-ID>{10}</MESSAGE-ID></REQ>]]></messageformat>
+	</deliveryconnector>
+
+	<optionalparameterstag>
+		<tlv1>
+			<tag>772</tag>
+			<name>Total-Msg-Count</name>
+			<type>Byte</type>
+		</tlv1>
+	</optionalparameterstag>
+
+
+	<!-- if process manager is there then uncomment these lines. <Heartbeats> 
+		<HeartBeatPath>/home/smsuser/ProcessManager/JHeartBeat.exe</HeartBeatPath> 
+		<AppManagerID>208</AppManagerID> <AppId>1</AppId> <HeartBeatsInterval>1000</HeartBeatsInterval> 
+		</Heartbeats> -->
+	<cdr>
+		<formatPattern><![CDATA[Header = [Smsc Id = {0}, Log time = {1}, Request Id = {2}, Request Transaction Id = {3}, Submit time ={4}], REQ = [Status Code = {5}, command_id(hex) = {6}, command_status ={7}, sequence_number ={8}, service_type = {9}, source_addr_ton = {10}, source_addr_npi = {11}, source_addr = {12}, dest_addr_ton = {13}, dest_addr_npi ={14}, dest_addr = {15}, esm_class ={16}, registered_delivery ={21}, replace_if_present_flag = {22}, data_coding(int) = {23}, short_message(hex) = {25}], RESP = [command_id = {26}, command_status = {27}, sequence_number = {28}, message_id = {29}]]]></formatPattern>
+	</cdr>
+
+
+
+</config>
+

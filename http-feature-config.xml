@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<config>
+ <!-- Bind -->
+  <feature id="bind">
+  <req-assembler>com.sixdee.imp.request.BindReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.BindRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.BindFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.BindReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.BindRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.BindBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>BindLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.BindBO</bo> 
+  </feature>	
+   
+  <!-- UnBind -->
+  <feature id="unbind">
+  <req-assembler>com.sixdee.imp.request.UnbindReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.UnbindRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.UnbindFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.UnbindReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.UnbindRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.UnbindBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>UnbindLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.UnbindBO</bo> 
+  </feature> 
+  
+  <!-- ReBind -->
+  <feature id="rebind">
+  <req-assembler>com.sixdee.imp.request.RebindReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.RebindRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.RebindFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.RebindReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.RebindRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.RebindBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>RebindLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.RebindBO</bo> 
+  </feature> 
+  
+  <feature id="GetDetails">
+  <req-assembler>com.sixdee.imp.request.GetReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.GetRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.GetFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.GetReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.GetRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.GetBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>GetLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.GetBO</bo> 
+  </feature>
+ 
+ <feature id="submit_sm">
+  <req-assembler>com.sixdee.imp.request.SubmitSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SubmitSmBO</bo>
+ </feature>
+
+ <feature id="synch_submit_sm">
+  <req-assembler>com.sixdee.imp.request.SubmitSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SynchSubmitSmBO</bo>
+ </feature>
+
+ <feature id="httpBased_submit_sm">
+  <req-assembler>com.sixdee.imp.request.SubmitSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedSubmitSmBO</bo>
+ </feature>
+
+ <feature id="submit_multi">
+  <req-assembler>com.sixdee.imp.request.SubmitMultiReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitMultiRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitMultiFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitMultiReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitMultiRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitMultiBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitMultiLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SubmitMultiBO</bo>
+ </feature>
+
+ <feature id="synch_submit_multi">
+  <req-assembler>com.sixdee.imp.request.SubmitMultiReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitMultiRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitMultiFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitMultiReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitMultiRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitMultiBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitMultiLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SynchSubmitMultiBO</bo>
+ </feature>
+
+ <feature id="httpBased_submit_multi">
+  <req-assembler>com.sixdee.imp.request.SubmitMultiReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitMultiRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitMultiFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitMultiReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitMultiRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitMultiBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>SubmitMultiLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedSubmitMultiBO</bo>
+ </feature>
+
+ <feature id="data_sm">
+  <req-assembler>com.sixdee.imp.request.DataSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.DataSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.DataSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.DataSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.DataSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.DataSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>DataSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.DataSmBO</bo>
+ </feature>
+
+ <feature id="synch_data_sm">
+  <req-assembler>com.sixdee.imp.request.DataSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.DataSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.DataSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.DataSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.DataSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.DataSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>DataSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SynchDataSmBO</bo>
+ </feature>
+
+ <feature id="httpBased_data_sm">
+  <req-assembler>com.sixdee.imp.request.DataSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.DataSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.DataSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.DataSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.DataSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.DataSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>DataSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedDataSmBO</bo>
+ </feature>
+
+ <feature id="query_sm">
+  <req-assembler>com.sixdee.imp.request.QuerySmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.QuerySmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.QuerySmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.QuerySmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.QuerySmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.QuerySmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>QuerySmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.QuerySmBO</bo>
+ </feature>
+
+ <feature id="httpBased_query_sm">
+  <req-assembler>com.sixdee.imp.request.QuerySmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.QuerySmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.QuerySmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.QuerySmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.QuerySmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.QuerySmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>QuerySmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedQuerySmBO</bo>
+ </feature>
+
+ <feature id="cancel_sm">
+  <req-assembler>com.sixdee.imp.request.CancelSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.CancelSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.CancelSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.CancelSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.CancelSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.CancelSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>CancelSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.CancelSmBO</bo>
+ </feature>
+
+ <feature id="httpBased_cancel_sm">
+  <req-assembler>com.sixdee.imp.request.CancelSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.CancelSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.CancelSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.CancelSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.CancelSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.CancelSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>CancelSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedCancelSmBO</bo>
+ </feature>
+
+ <feature id="replace_sm">
+  <req-assembler>com.sixdee.imp.request.ReplaceSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.ReplaceSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.ReplaceSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.ReplaceSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.ReplaceSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.ReplaceSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>ReplaceSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.ReplaceSmBO</bo>
+ </feature>
+
+ <feature id="httpBased_replace_sm">
+  <req-assembler>com.sixdee.imp.request.ReplaceSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.ReplaceSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.ReplaceSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.ReplaceSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.ReplaceSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.ReplaceSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>ReplaceSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedReplaceSmBO</bo>
+ </feature>
+
+ <feature id="bl">
+  <req-assembler>com.sixdee.imp.request.BLReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.BLRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.BLFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.BLReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.BLRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.BLBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>BLLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.BLBO</bo>
+ </feature>
+
+ <feature id="synch_bl">
+  <req-assembler>com.sixdee.imp.request.BLReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.BLRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.BLFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.BLReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.BLRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.BLBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>BLLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.SynchBLBO</bo>
+ </feature>
+
+ <feature id="httpBased_bl">
+  <req-assembler>com.sixdee.imp.request.BLReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.BLRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.BLFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.BLReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.BLRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.BLBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>BLLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.HttpBasedBLBO</bo>
+ </feature>
+
+ <feature id="retrySubmitSm">
+  <req-assembler>com.sixdee.imp.request.SubmitSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>RetrySubmitSmLocal</jndi-name>
+  <bo>com.sixdee.imp.bo.RetrySubmitSmBO</bo>
+ </feature>
+ 
+ <feature id="retry">
+  <req-assembler>com.sixdee.imp.request.SubmitSmReqAssm</req-assembler>
+  <resp-assembler>com.sixdee.imp.response.SubmitSmRespAssm</resp-assembler>
+  <format-validator>com.sixdee.imp.validator.format.SubmitSmFrmtValidator</format-validator>
+  <req-converter>com.sixdee.imp.converter.request.SubmitSmReqConv</req-converter>
+  <resp-converter>com.sixdee.imp.converter.response.SubmitSmRespConv</resp-converter>
+  <bo-validator>com.sixdee.imp.validator.bo.SubmitSmBOValidator</bo-validator>
+  <bo-ejb-enabled>false</bo-ejb-enabled>
+  <is-ejb-local>false</is-ejb-local>
+  <jndi-name>RetryLocal</jndi-name>
+  <bo objectPool="true" maxActive="1" maxWait="-1" maxIdle="1" timeBetweenEvictionRunsMillis="-1" minEvictableIdleTimeMillis="-1" lifo="true">com.sixdee.imp.bo.RetryBO</bo>
+ </feature>
+</config>

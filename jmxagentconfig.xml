@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jmxconfig>
+	<!-- yes for enabling MBean,no for disabling mbean -->
+	<!-- Default value is yes -->
+	<!-- <mbeanenabled>yes</mbeanenabled> -->
+	<!-- yes for enabling platform mbean ,no for  disabling platform mbean --> 
+	<!-- Default value is yes  -->
+	<platformmbeanenabled>yes</platformmbeanenabled>
+	<!-- Different protocols are rmi,jmxmp,snmp,http,https -->
+	<!-- Default protocol is jmxmp -->
+	<mbeanprotocol>jmxmp</mbeanprotocol>
+	<!-- port address of the  mbean agent server-->
+	<mbeanserverport>9876</mbeanserverport>	
+	<!-- Domain name in which mbean are registered  -->
+	<!-- Default value is 6dLib -->
+	<jmxdomianname>6dLib</jmxdomianname>
+	<!-- MBean implementation class names -->
+	<MBeanClassName>com.sixdee.fw.manage.mbean.Alaram</MBeanClassName>
+	<MBeanClassName>com.sixdee.fw.manage.mbean.RealTimeCount</MBeanClassName>
+	<mbeanclassName>com.sixdee.fw.manage.mbean.BusyHr</mbeanclassName>
+	<MBeanClassName>com.sixdee.fw.manage.mbean.PeekHrCount</MBeanClassName>	
+	<!-- <MBeanClassName>com.sixdee.jmx.mbean.DBReplication</MBeanClassName> -->
+</jmxconfig>
